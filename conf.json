@@ -1,0 +1,18 @@
+{
+  "api": {
+     "api_keys": {
+
+       "google_maps_key": "empty"
+     },
+     "api_urls": {
+        "ztm_bus_tram_url": "https://api.ztm.waw.pl/api/action/busestrams_get/",
+        "ztm_bus_stop_url": "https://api.ztm.waw.pl/api/action/dbtimetable_get/"
+    }
+  },
+  "logging": {
+    "log_options": {
+      "log_level": "DEBUG"
+    }
+  }
+
+}
