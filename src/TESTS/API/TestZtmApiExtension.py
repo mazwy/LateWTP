@@ -1,5 +1,5 @@
 from pytest import fixture
-from src.API.Data.Extensions.ZtmApiExtension import ZtmApiExtension
+from src.API.API_Package import ZtmApiExtension
 
 
 @fixture

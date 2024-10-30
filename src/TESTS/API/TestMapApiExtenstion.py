@@ -1,5 +1,5 @@
 from pytest import fixture
-from src.API.Data.Extensions.MapApiExtension import MapApiExtension
+from src.API.API_Package import MapApiExtension
 from unittest.mock import MagicMock
 
 
