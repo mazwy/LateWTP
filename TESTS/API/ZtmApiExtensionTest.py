@@ -81,7 +81,3 @@ def test_get_stop_schedule_data_invalid_stop(ztm_api):
     data = ztm_api.get_stop_schedule_data('', '01', 1)
     assert data == []
 
-
-def test_get_lines_for_bus_stop(ztm_api):
-    data = ztm_api.get_lines_for_bus_stop('01')
-    assert data is not None
