@@ -1,0 +1,13 @@
+geopy
+requests
+pyserial
+warsaw_data_api
+json
+logging
+datetime
+csv
+typing
+socket
+serial
+re
+time
