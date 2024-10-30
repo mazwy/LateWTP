@@ -8,7 +8,7 @@ from geopy.distance import geodesic
 from geopy.geocoders import Nominatim
 from geopy.units import km, m
 from typing import Dict
-from API.Data.Extensions.HelperDecoratorsExtension import logfunction, handleexceptions
+from src.API.Data.Extensions.HelperDecoratorsExtension import logfunction, handleexceptions
 
 
 class MapApiExtension:

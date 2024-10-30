@@ -1,6 +1,4 @@
-from API.Data.Extensions import CsvDataExtension
-from API.Data.Extensions.ZtmApiExtension import ZtmApiExtension
-from API.Data.Extensions.MapApiExtension import MapApiExtension
+from src.API.Data.Extensions.MapApiExtension import MapApiExtension
 
 
 def main():

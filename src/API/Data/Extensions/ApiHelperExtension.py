@@ -1,6 +1,6 @@
 import logging as log
-import ConfigExtension as config
-from API.Data.Extensions.HelperDecoratorsExtension import handleexceptions
+from src import ConfigExtension as config
+from src.API.Data.Extensions.HelperDecoratorsExtension import handleexceptions
 
 log.basicConfig(level=log.INFO, format='%(asctime)s - %(message)s')
 

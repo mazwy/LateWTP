@@ -1,11 +1,11 @@
 import time
 import logging as log
-import ConfigExtension as config
+from src import ConfigExtension as config
 import warsaw_data_api as wda_api
 from warsaw_data_api.ztm.models import ZtmVehicle, ZtmSchedule
 from typing import Optional, List, Dict
 
-from API.Data.Extensions.HelperDecoratorsExtension import handleexceptions
+from src.API.Data.Extensions.HelperDecoratorsExtension import handleexceptions
 
 
 class ZtmApiExtension:
