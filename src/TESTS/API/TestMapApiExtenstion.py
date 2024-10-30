@@ -1,6 +1,7 @@
 from pytest import fixture
 from src.API.API_Package import MapApiExtension
 from unittest.mock import MagicMock
+from geopy.units import km
 
 
 @fixture
@@ -11,42 +12,42 @@ def map_api_extension():
 @fixture
 def mock_geocode(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.Nominatim.geocode', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.Nominatim.geocode', mock)
     return mock
 
 
 @fixture
 def mock_reverse_geocode(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.Nominatim.reverse', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.Nominatim.reverse', mock)
     return mock
 
 
 @fixture
 def mock_serial(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.serial.Serial', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.serial.Serial', mock)
     return mock
 
 
 @fixture
 def mock_socket(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.socket.socket', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.socket.socket', mock)
     return mock
 
 
 @fixture
 def mock_requests(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.requests.get', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.requests.get', mock)
     return mock
 
 
 @fixture
 def mock_distance(monkeypatch):
     mock = MagicMock()
-    monkeypatch.setattr('API.Data.Extensions.MapApiExtension.geodesic', mock)
+    monkeypatch.setattr('src.API.Data.Extensions.MapApiExtension.geodesic', mock)
     return mock
 
 
@@ -86,9 +87,9 @@ def test_reverse_geocode_data_for_valid_coordinates(map_api_extension, mock_reve
 
 
 def test_get_distance(map_api_extension):
-    distance = map_api_extension.get_distance('Warsaw', 'Krakow', 'km')
+    distance = map_api_extension.get_distance('Warsaw', 'Krakow', km)
     assert distance is not None
-    assert distance.km > 0
+    assert distance > 0
 
 
 def test_get_distance_invalid_units(map_api_extension):
